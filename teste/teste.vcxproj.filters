@@ -30,6 +30,9 @@
     <MASM Include="exe3.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="exe2-c.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">
