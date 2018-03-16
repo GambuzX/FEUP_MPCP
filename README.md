@@ -1,2 +1,2 @@
-# MPCP-17-18
-Solved assembly exercises
+# MPCP_2018
+Solved assembly exercises from MPCP classes
