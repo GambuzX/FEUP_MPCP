@@ -2,7 +2,7 @@ include mpcp.inc
 
 .data
 
-sequence SBYTE -5,-8,-9,9,8,5
+sequence SBYTE -5,-8,-9,9,8,5,25
 msg BYTE "Total sum = %d", 13,10,0
 
 .code
