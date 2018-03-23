@@ -54,6 +54,9 @@
     <MASM Include="exe17_a.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="exe17_b.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">
