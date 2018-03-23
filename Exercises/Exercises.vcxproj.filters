@@ -36,6 +36,12 @@
     <MASM Include="exe6.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="exe14-a.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="exe14-b.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
     <MASM Include="exe13.asm">
       <Filter>Source Files</Filter>
     </MASM>
