@@ -16,6 +16,7 @@ main PROC C
 	add eax, ebx	
 
 invoke printf, offset msg, eax
+invoke _getch
 invoke	ExitProcess, 0
 
 main ENDP
