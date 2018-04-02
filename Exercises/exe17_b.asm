@@ -2,8 +2,8 @@ include mpcp.inc
 
 .data
 
-sequence DWORD 1,2,3,4,5,6
-overf CHAR "OVERFLOW!", 13,10,0
+sequence DWORD 1,2,3,4,5,6,12
+overf BYTE "OVERFLOW!"
 
 .code
 main PROC C
@@ -21,6 +21,7 @@ add edx, TYPE sequence
 loop ciclo
 
 mov ecx, LENGTHOF sequence
+mov edx, 0
 div ecx
 
 sal edx,1 ;multiplico resto por 2
@@ -28,10 +29,13 @@ cmp edx,ecx ;comparo o dobro do resto com o divisor
 jnge fim ;se nao for maior ou igual, nao e preciso incrementar
 inc eax 
 
+jmp fim
+
 overflow:
-invoke printf, OFFSET overf
+invoke printf, offset overf
 
 fim:
+invoke _getch
 invoke ExitProcess,0
 
 main ENDP
