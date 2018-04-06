@@ -2,10 +2,11 @@ include mpcp.inc
 
 .data
 
-sequence BYTE "(abc)"
+sequence BYTE "((()))"
 validMsg BYTE "Valid",0
 invalidMsg BYTE "Invalid",0
 currentChar BYTE 'a'
+itemsInStack DWORD 0
 
 .code
 
@@ -14,7 +15,8 @@ main PROC C
 	mov ecx, LENGTHOF sequence
 
 checkBrackets:
-	mov currentChar, BYTE PTR [ebx]
+	mov al, BYTE PTR [ebx]
+	mov currentChar, al
 
 	cmp currentChar, '('
 	jz pushBracket ; if same char
@@ -31,7 +33,8 @@ checkBrackets:
 	cmp currentChar, ')'
 	jnz c5
 	pop eax
-	cmp eax, '('
+	dec itemsInStack
+	cmp al, '('
 	jnz invalid
 	jmp end1
 
@@ -39,25 +42,30 @@ checkBrackets:
 	cmp currentChar, ']'
 	jnz c6
 	pop eax
-	cmp eax, '['
+	dec itemsInStack
+	cmp al, '['
 	jnz invalid
 	jmp end1
 
 	c6:
 	cmp currentChar, '}'
-	jnz c6
+	jnz end1
 	pop eax
-	cmp eax, '{'
+	dec itemsInStack
+	cmp al, '{'
 	jnz invalid
 	jmp end1
 
 	pushBracket:
 	push DWORD PTR currentChar
+	inc itemsInStack
 
 	end1:
 	inc ebx
-	dec ecx
 	loop checkBrackets
+
+	cmp itemsInStack, 0
+	jnz invalid
 
 	valid:
 	invoke printf, OFFSET validMsg
