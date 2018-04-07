@@ -152,7 +152,10 @@
     <MASM Include="exe4_3.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
-    <MASM Include="exe4_4.asm" />
+    <MASM Include="exe4_4.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="exe4_5.asm" />
     <MASM Include="exe5-a.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
