@@ -2,7 +2,7 @@ include mpcp.inc
 
 .data
 
-.code
+.code	
 
 ROTINA PROC C uses EDI A:DWORD , B: DWORD
 ret
