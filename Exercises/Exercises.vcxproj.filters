@@ -84,6 +84,9 @@
     <MASM Include="exe4_8.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="exe4_10.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">
