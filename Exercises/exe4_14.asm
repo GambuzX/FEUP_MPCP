@@ -2,25 +2,31 @@ include mpcp.inc
 
 .data
 msg BYTE "The max number is %d", 0, 10, 13
-sequence DWORD 1,240,3,4,5,6,7,12,8,27
+sequence DWORD 1,240,3,4,5,6,7999,12,8,27
 
 .code
 
 maxnum PROC SEQ: PTR DWORD, N:DWORD
+	LOCAL valor: DWORD
+	mov ebx, SEQ
+	mov ecx, N
 
-	cmp N, 0
-	jz endMaxNum
-	mov edx, N
-	mov ebx, SEQ ; stores address in a register
-	mov ecx, [ebx] ; stores current value
-	cmp eax, ecx
-	jg recursion
-	mov eax, ecx ; if greater
+	cmp N, 1
+	jz casoBase
 
-	recursion:
+	;Se nao caso base
+	mov edx, [ebx] ;guarda valor atual
+	mov valor, edx
 	add ebx, 4
-	dec edx
-	invoke maxnum, ebx, edx
+	dec ecx
+	invoke maxnum, ebx, ecx ;eax has max value
+	.IF valor > eax
+		mov eax, valor
+	.ENDIF
+	jmp endMaxNum
+
+	casoBase:
+	mov eax, [ebx]
 
 	endMaxNum:
 	ret
