@@ -50,4 +50,21 @@ nviaturas PROC tin: PTR WORD, tout: PTR WORD, N: WORD, M: WORD
 	ret
 nviaturas ENDP
 
+coerente PROC tin: PTR WORD, tout: PTR WORD, N: DWORD
+	mov esi, tin
+	mov edi, tout
+	mov ecx, N
+
+compare:
+	cmpsw
+	ja fim
+	loop compare
+	xor eax, eax
+	ret
+
+fim:
+	mov eax, 1
+	ret
+coerent ENDP
+
 end
