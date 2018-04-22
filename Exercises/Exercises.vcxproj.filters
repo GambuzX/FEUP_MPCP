@@ -90,6 +90,9 @@
     <MASM Include="test2-17-18.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="finalExam-15-16.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">

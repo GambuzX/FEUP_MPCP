@@ -188,7 +188,10 @@
     <MASM Include="exe6.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </MASM>
-    <MASM Include="test2-17-18.asm" />
+    <MASM Include="finalExam-15-16.asm" />
+    <MASM Include="test2-17-18.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc" />
