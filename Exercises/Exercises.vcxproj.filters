@@ -96,6 +96,9 @@
     <MASM Include="exe4_7_a.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="test1-16-17.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">
