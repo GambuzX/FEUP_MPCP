@@ -30,7 +30,7 @@ conta_intervalo PROC pt:PTR REAL4, N:dword, limA:REAL4, limB:REAL4
 		cmpps xmm3, xmm2, 2 ;limite inferior
 
 		andps xmm0, xmm3 ;valores dentro dos limites ficam 11111...1111
-		movmskps ebx, smm0
+		movmskps ebx, xmm0
 
 		dec ecx
 		add edx, 16
