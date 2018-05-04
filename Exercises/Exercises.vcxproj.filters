@@ -123,10 +123,18 @@
     <MASM Include="exe5_15.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="exe5_17_b.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">
       <Filter>Header Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="exe5_17_a.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
