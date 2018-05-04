@@ -10,7 +10,7 @@ extern "C" void prodintSIMD(float* vecX, float* vecY, int N, float* res);
 const unsigned NREP = 100000;
 
 // Numero de elementos dos vetores 
-const unsigned NELEM = 10000;
+const unsigned NELEM = 50000;
 
 // garantir alinhamento correto 
 _declspec(align(16)) float seqX[NELEM];
