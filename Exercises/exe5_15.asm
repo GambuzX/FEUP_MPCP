@@ -2,27 +2,27 @@ include mpcp.inc
 .xmm
 
 .data
-sequence SDWORD 12 , 1 , 4 , 5 ,9 , 15 ,0 , 3
+sequence REAL4 12.0 , 1.5 , 4.1 , 5.2 ,9.8 , 15.9 ,0.0 , 3.7
 
 .code
-invCoords PROTO seq: PTR SDWORD, n: DWORD
+mirrorSeq PROTO seq:PTR REAL4, N:DWORD
 
 main PROC C
-	invoke invCoords, OFFSET sequence, LENGTHOF sequence
+	invoke mirrorSeq, OFFSET sequence, LENGTHOF sequence
 	mov eax, OFFSET sequence
 	
 	invoke _getch
 	invoke ExitProcess,0
 main ENDP
 
-invCoords PROC seq: PTR SDWORD, n: DWORD
+mirrorSeq PROC seq:PTR REAL4, N:DWORD	
 	mov ebx, seq
-	mov ecx, n
+	mov ecx, N
 	shr ecx, 1
 
 	.WHILE ecx > 0
-		cvtsi2ss xmm0, REAL4 PTR [ebx]
-		cvtsi2ss xmm1, REAL4 PTR [ebx+4]
+		movss xmm0, REAL4 PTR [ebx]
+		movss xmm1, REAL4 PTR [ebx+4]
 
 		movss REAL4 PTR [ebx+4], xmm0
 		movss REAL4 PTR [ebx], xmm1
@@ -31,6 +31,6 @@ invCoords PROC seq: PTR SDWORD, n: DWORD
 		add ebx, 8
 	.ENDW
 	ret
-invCoords ENDP
+mirrorSeq ENDP
 
 end
