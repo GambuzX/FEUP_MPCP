@@ -120,6 +120,9 @@
     <MASM Include="exe5_14_packed.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="exe5_15.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
   <ItemGroup>
     <None Include="mpcp.inc">
