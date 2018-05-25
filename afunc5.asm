@@ -1,3 +1,5 @@
+;; Funcao 5 em linguagem assembly
+;; Valor de retorno: nenhum
 .686
 .model flat, C
 
@@ -7,7 +9,7 @@ val4 DWORD 4
 
 .code
 
-signalLineMostStrongPixel PROC pixels: ptr byte, largura: sdword, altura:sdword
+afunc5 PROC pixels: ptr byte, largura: sdword, altura:sdword
 	LOCAL currentMax: BYTE, maxIndex: SDWORD
 	mov edi, pixels
 	mov ecx, altura
@@ -41,7 +43,7 @@ signalLineMostStrongPixel PROC pixels: ptr byte, largura: sdword, altura:sdword
 			sub edx, ecx
 			mov maxIndex, edx
 		.ENDIF
-		
+
 		add edi, 4
 		loop insideLoop
 
@@ -67,6 +69,6 @@ signalLineMostStrongPixel PROC pixels: ptr byte, largura: sdword, altura:sdword
 	loop inicio		
 
 	ret
-signalLineMostStrongPixel ENDP
+afunc5 ENDP
 
 END
