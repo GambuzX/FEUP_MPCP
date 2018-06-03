@@ -31,7 +31,7 @@ scaleSeq PROC seq:PTR REAL4, N:DWORD, alfa:REAL4
 		movaps REAL4 PTR [ebx], xmm1
 
 		add ebx, 16
-		dec ecx
+		sub ecx, 4
 	.ENDW
 	ret
 scaleSeq ENDP
