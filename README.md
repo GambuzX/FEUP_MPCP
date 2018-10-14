@@ -14,8 +14,7 @@ Exercises solved during the MPCP curricular unit.
 * **Date:** 1st Year, 2nd Semester, 2017/2018
 * **Course:** [Microprocessadores e Computadores Pessoais | Microprocessors and Personal Computers](https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=399884 "MPCP") (MPCP)
 
-### Disclaimer 
-<pre>(Valid for any <strong>MIEIC_<em>course</em></strong> repository)</pre>
+### Disclaimer (Valid for any `MIEIC_course` repository)
 This repository was used for educational purposes and I do not take any responsibility for anything related to its content. You are free to use any code or algorithm you find, but do so at your own risk.
 
 ### Notes:
